@@ -159,11 +159,13 @@ void loop() {
       superMax = maxi;
     }
 
-
+    
 //    for (i = 0; i < 10; i++)
 //    {
 //      digitalWrite(arr[i], LOW);
 //    }
+    
+    //For Faster response
     for (i = 2; i <= 7; i++)
     {
       PORTD=~(1<<i)&PORTD;
@@ -178,15 +180,5 @@ void loop() {
     for (i = 0; i < (maxi / prescale) && (i < 10); i++) {
       digitalWrite(arr[i], HIGH);
     }
-
   }
 }
-
-
-
-
-/////////////////////////////////////
-//scale = max * (10 / 1023);
-//Serial.print(10);
-// Serial.print(" ");
-//Serial.println(max/100);
